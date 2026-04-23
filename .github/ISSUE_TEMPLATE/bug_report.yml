@@ -1,0 +1,68 @@
+name: Bug report
+description: Report a parsing/extraction/pipeline issue
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug.
+
+        ⚠️ Please **do not** upload copyrighted/commercial binaries.
+        If possible, include a minimal sample or the requested hexdump.
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: "Windows 11 / Ubuntu 24.04 / etc."
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.11.8"
+    validations:
+      required: true
+  - type: input
+    id: nuitka
+    attributes:
+      label: Nuitka version (if known)
+      placeholder: "2.x / unknown"
+    validations:
+      required: false
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      options:
+        - Stage 1 (unlicense / dynamic)
+        - Stage 2 (nuthem / static)
+        - Stage 3 (nuitka-static-unpacker / optional)
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command you ran
+      render: shell
+      placeholder: |
+        py -m nuthem extract unpacked_target.exe
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Full console output / traceback
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: hexdump
+    attributes:
+      label: 64-byte hexdump at KAX/KAY offset (recommended)
+      description: "If you can, paste the first 64 bytes starting at the KAX/KAY magic."
+      render: text
+    validations:
+      required: false

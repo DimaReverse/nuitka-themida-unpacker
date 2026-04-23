@@ -1,0 +1,2 @@
+# Required only for KAY (zstd-compressed) payloads
+zstandard>=0.21.0

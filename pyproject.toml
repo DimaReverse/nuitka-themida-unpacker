@@ -1,0 +1,46 @@
+ [build-system]
+ requires = ["setuptools>=69", "wheel"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "nuitka-themida-unpacker"
+ version = "0.1.0"
+ description = "Two-stage pipeline: Themida/WinLicense (unlicense) → Nuitka onefile (KAX/KAY) extractor."
+ readme = "README.md"
+ requires-python = ">=3.8"
+ license = { file = "LICENSE" }
+ authors = [{ name = "Dimitri Bordei" }]
+ keywords = ["nuitka", "themida", "winlicense", "reverse-engineering", "unpacker", "malware-analysis"]
+ classifiers = [
+   "License :: OSI Approved :: MIT License",
+   "Programming Language :: Python :: 3",
+   "Programming Language :: Python :: 3 :: Only",
+   "Operating System :: Microsoft :: Windows",
+ ]
+ dependencies = [
+   "zstandard>=0.21.0",
+ ]
+ 
+ [project.optional-dependencies]
+ dev = [
+   "ruff",
+ ]
+ 
+ [project.urls]
+ Homepage = "https://github.com/DimaReverse/nuitka-themida-unpacker"
+ Issues = "https://github.com/DimaReverse/nuitka-themida-unpacker/issues"
+ 
+ [project.scripts]
+ nuthem = "nuthem:cli"
+ nuthem-pipeline = "pipeline:cli"
+ 
+ [tool.setuptools]
+ py-modules = ["nuthem", "pipeline"]
+ 
+ [tool.ruff]
+ line-length = 120
+ target-version = "py38"
+ 
+ [tool.ruff.lint]
+ select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501", "UP045"]
