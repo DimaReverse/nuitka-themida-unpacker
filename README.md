@@ -249,6 +249,16 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 MIT — see [`LICENSE`](LICENSE).
 
+## Donations
+
+If you want to support the project:
+
+- BTC: `bc1qa36fz0726e858l6enj7pt3359j20z98npl3av0`
+- LTC: `ltc1qpszucslm3zyq2caemrrxr6dxx7kh28nx7xrgpc`
+- ETH: `0x8541027655a7DfC7150F9bc9E603300048AeE022`
+
+Built during some hard years. Shared in the hope it helps someone.
+
 ## Credits
 
 - `nuthem.py` — Dimitri Bordei / `dima_reverse`
